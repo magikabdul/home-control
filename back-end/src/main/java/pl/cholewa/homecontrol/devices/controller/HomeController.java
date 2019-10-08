@@ -1,7 +1,7 @@
 package pl.cholewa.homecontrol.devices.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Controller;
 import pl.cholewa.homecontrol.devices.model.Switcher;
 import pl.cholewa.homecontrol.devices.model.constant.Battery;
 import pl.cholewa.homecontrol.devices.model.constant.DeviceType;
@@ -9,18 +9,18 @@ import pl.cholewa.homecontrol.devices.model.constant.DeviceType;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Controller
 public class HomeController {
 
-    private List<Switcher> eatonDevices = new ArrayList<>();
+    private List<Switcher> eatonDevices;
 
     @Autowired
-    public HomeController(List<Switcher> eatonDevices) {
-        this.eatonDevices = eatonDevices;
+    public HomeController() {
+        eatonDevices = new ArrayList<>();
 
         eatonDevices.add(new Switcher("Ceiling", Battery.MAINS_POWER, DeviceType.SWITCHER));
-        eatonDevices.add(new Switcher("Desk", Battery.MAINS_POWER, DeviceType.SWITCHER));
-        eatonDevices.add(new Switcher("Standing", Battery.MAINS_POWER, DeviceType.SWITCHER));
+        eatonDevices.add(new Switcher("Desk", Battery.EMPTY, DeviceType.SWITCHER));
+        eatonDevices.add(new Switcher("Standing", Battery.NEW, DeviceType.SWITCHER));
     }
 
     public List<Switcher> getEatonDevices() {

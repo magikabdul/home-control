@@ -5,11 +5,11 @@ import pl.cholewa.homecontrol.devices.model.constant.Battery;
 public class Switcher implements EatonDevice {
 
     private String name;
-    private int batteryStatus;
+    private String  batteryStatus;
     private int deviceType;
     private boolean isOn = false;
 
-    public Switcher(String name, int batteryStatus, int deviceType) {
+    public Switcher(String name, String  batteryStatus, int deviceType) {
         this.name = name;
         this.batteryStatus = batteryStatus;
         this.deviceType = deviceType;
@@ -29,12 +29,12 @@ public class Switcher implements EatonDevice {
     }
 
     @Override
-    public void setBatteryStatus(int batteryStatus) {
+    public void setBatteryStatus(String  batteryStatus) {
         this.batteryStatus = batteryStatus;
     }
 
     @Override
-    public int getBatteryStatus() {
+    public String getBatteryStatus() {
         return batteryStatus;
     }
 
@@ -51,6 +51,16 @@ public class Switcher implements EatonDevice {
     @Override
     public void setStatus(int deviceStatus) {
 
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
