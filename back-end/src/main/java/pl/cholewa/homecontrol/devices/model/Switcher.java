@@ -1,6 +1,6 @@
-package devices.model;
+package pl.cholewa.homecontrol.devices.model;
 
-import devices.model.constant.Battery;
+import pl.cholewa.homecontrol.devices.model.constant.Battery;
 
 public class Switcher implements EatonDevice {
 

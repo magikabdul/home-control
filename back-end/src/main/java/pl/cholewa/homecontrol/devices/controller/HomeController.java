@@ -1,10 +1,10 @@
-package devices.controller;
+package pl.cholewa.homecontrol.devices.controller;
 
-import devices.model.Switcher;
-import devices.model.constant.Battery;
-import devices.model.constant.DeviceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.cholewa.homecontrol.devices.model.Switcher;
+import pl.cholewa.homecontrol.devices.model.constant.Battery;
+import pl.cholewa.homecontrol.devices.model.constant.DeviceType;
 
 import java.util.ArrayList;
 import java.util.List;

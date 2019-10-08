@@ -1,4 +1,4 @@
-package devices.model;
+package pl.cholewa.homecontrol.devices.model;
 
 public interface EatonDevice {
 

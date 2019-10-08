@@ -1,4 +1,4 @@
-package devices.model.constant;
+package pl.cholewa.homecontrol.devices.model.constant;
 
 public class DeviceType {
 
