@@ -17,6 +17,34 @@ if ("serviceWorker" in navigator) {
    });
 }
 
-// place your code below
+const a = 11;
+const apiLink = "http://localhost:8080/eaton/device/1";
+const cardHeader = document.querySelector(".card__title-js");
+const card = document.querySelector(".card");
 
-console.log(`Hello world!`);
+// console.log(apiLink.toString());
+
+// const content = apiLink;
+
+// cardHeader.innerHTML('tttt');
+
+card.addEventListener('click', e => {
+   // const tt = cardHeader.innerHTML;
+   // console.log(tt);
+   // if(tt !== "new") {
+   //    cardHeader.innerHTML = "new";
+   // } else {
+   //    cardHeader.innerHTML = "old";
+   // }
+
+   let test = new XMLHttpRequest();
+   test.open('GET', apiLink, true);
+
+   test.onload = function() {
+      console.log('in');
+      let data = JSON.parse(this.response);
+      cardHeader.innerHTML = data.name;
+   };
+
+   test.send();
+});

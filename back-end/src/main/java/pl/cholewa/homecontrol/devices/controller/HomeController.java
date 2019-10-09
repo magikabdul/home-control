@@ -26,4 +26,8 @@ public class HomeController {
     public List<Switcher> getEatonDevices() {
         return eatonDevices;
     }
+
+    public Switcher getEatonDevice(int id) {
+        return eatonDevices.get(id);
+    }
 }
